@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Your page title</title>
+  </head>
+  <body>
+    <a href="/">Go to start</a>
+    <div class="Content">
+      <form method = "POST" action="/{{step}}/{{direction}}">
+      <table>
+        <tr>
+          <td></td>
+          <td>
+            {{#if story.up}}
+              <a href="/{{nextStep}}/0/{{story.up}}">{{story.up}}</a>
+              <input type="text" name="up" value="{{story.up}}" class="hidden"/>
+            {{else}}
+              <input type="text" name="up"/>
+              <button type="submit">save</button>
+            {{/if}}
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            {{#if story.left}}
+              <a href="/{{nextStep}}/3/{{story.left}}">{{story.left}}</a>
+              <input type="text" name="left" value="{{story.left}}" class="hidden"/>
+            {{else}}
+              <input type="text" name="left"//>
+              <button type="submit">save</button>
+            {{/if}}
+          </td>
+          <td>
+            {{ centre }}
+            <input type="text" name="centre" value="{{centre}}" class="hidden"/>
+          </td>
+          <td>
+            {{#if story.right}}
+              <a href="/{{nextStep}}/1/{{story.right}}">{{story.right}}</a>
+              <input type="text" name="right" value="{{story.right}}" class="hidden"/>
+            {{else}}
+              <input type="text" name="right"//>
+              <button type="submit">save</button>
+            {{/if}}
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            {{#if story.down}}
+              <a href="/{{nextStep}}/2/{{story.down}}">{{story.down}}</a>
+              <input type="text" name="down" value="{{story.down}}" class="hidden"/>
+            {{else}}
+              <input type="text" name="down"/>
+              <button type="submit">save</button>
+            {{/if}}
+          </td>
+          <td></td>
+        </tr>
+      </table>
+      </form>
+    </div>
+  </body>
+</html>

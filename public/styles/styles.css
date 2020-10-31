@@ -1,0 +1,28 @@
+body{
+  margin: 5vw;
+}
+.Content{
+  width: 90vw;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+table{
+  min-width: 50vw;
+  height: 50%;
+  border: 1px solid #ddd;
+}
+td{
+  min-width: 30vw;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+input{
+  width: 80%;
+}
+button{
+  width: 15%
+}
+.hidden{
+  display: none;
+}
