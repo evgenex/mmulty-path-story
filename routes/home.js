@@ -4,7 +4,7 @@ const routeHome = (req, res, next) => {
   
   let step = req.params.step;
   let direction = req.params.direction;
-  let centre = 'story'
+  let centre = 'once upon a time...'
 
   if(typeof step!=='number' && (step%1)!==0){
     step = 0;
